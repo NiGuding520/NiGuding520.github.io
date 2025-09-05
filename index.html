@@ -1,0 +1,88 @@
+mv Hello.html index.html
+git add index.html
+git commit -m "Rename to index.html"
+git push origin main
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>整蛊Pro版本</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: black;
+        }
+        .warm {
+            color: red;
+            font-weight: bold;
+        }
+        #center {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        video {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+        .name-display {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="center">
+        <h1>整蛊Pro版本</h1>
+        <p class="warm">胆小慎入！</p>
+        
+        <div>
+            来将可留姓名：<input type="text" id="nameInput" placeholder="请输入您的姓名">
+        </div>
+        
+        <div class="name-display" id="displayName"></div>
+        
+        <video src="../1.mp4" controls width="900px">
+            您的浏览器不支持视频播放。
+        </video>
+    </div>
+
+    <script>
+        // 显示警告信息
+        alert("胆小慎入！");
+        
+        // 获取姓名输入框和显示区域
+        const nameInput = document.getElementById('nameInput');
+        const displayName = document.getElementById('displayName');
+        
+        // 监听输入框变化
+        nameInput.addEventListener('input', function() {
+            if (this.value.trim() !== '') {
+                displayName.textContent = '欢迎：' + this.value;
+            } else {
+                displayName.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
